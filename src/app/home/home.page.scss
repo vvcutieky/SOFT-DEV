@@ -1,0 +1,11 @@
+ion-toolbar {
+  ion-title {
+    // White color for "My Coffee"
+    color: white;
+
+    // Yellow color for "Shop"
+    .title-shop {
+      color: yellow;
+    }
+  }
+}

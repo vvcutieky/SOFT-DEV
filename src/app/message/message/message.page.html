@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title class="ion-padding-start">Message</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">
+        <ion-icon name="person-circle" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="message">
+    <div class="inquiries_header_platter">
+      <div id="faq_header">Get In Touch</div>
+      <div id="faq_subtitle">Send us a message</div>
+    </div>
+    <div>
+      <ion-icon routerLink="/tabs/inquiries" size="large" name="close-circle"></ion-icon>
+    </div>
+  </div>
+
+  <div class="ion-padding">
+    <div class="message-box-container">
+      <ion-textarea type="text" multiline spellcheck="true" [(ngModel)]="message" placeholder="Type your message..."></ion-textarea>
+      <div class="button-platter">
+        <ion-button id="send" color="primary" (click)="sendMessage()">Send</ion-button>
+        <ion-button color="danger" (click)="resetMessage()">Reset</ion-button>
+      </div>
+    </div>
+  </div>
+
+  <ion-toast class="toast" trigger="send" message="Message Sent" [duration]="3000" icon="checkmark-circle"></ion-toast>
+  <ion-toast trigger="send" message="Message Sent" [duration]="3000" icon="checkmark-circle"></ion-toast>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="brown">
+    <!-- Search icon in the header -->
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="search-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My CoffeeShop</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="false">
+  <!-- Product Menu Content -->
+    <ion-segment (ionChange)="categoryChanged($event)" class="custom-segment">
+      <ion-segment-button value="Hot Coffee">Hot Coffee</ion-segment-button>
+      <ion-segment-button value="Iced Coffee">Iced Coffee</ion-segment-button>
+      <ion-segment-button value="Waffles">Waffles</ion-segment-button>
+      <ion-segment-button value="Sandwich">Sandwich</ion-segment-button>
+      <ion-segment-button value="Pasta">Pasta</ion-segment-button>
+    </ion-segment>
+    
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" *ngFor="let product of filteredProducts" class="custom-col">
+        <ion-card style="--background: #884A39;">
+          <!-- Heart icon -->
+          <ion-icon name="heart" class="heart-icon" (click)="toggleFavorite(product)"></ion-icon>
+          <img [src]="product.image" alt="{{ product.name }}">
+          <ion-card-content>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+            <ion-label class="price">{{ product.price }}</ion-label>
+            <ion-item style="--background: #884A39;">
+              <ion-label>Quantity:</ion-label>
+              <!-- Quantity buttons -->
+              <ion-button>
+                <ion-icon name="add-circle"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+</ion-content>

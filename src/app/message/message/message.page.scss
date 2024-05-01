@@ -1,0 +1,81 @@
+ion-toolbar {
+  --min-height: 70px;
+
+  ion-title {
+    --color: #000;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.inquiries_header_platter {
+  margin: 24px;
+}
+
+#faq_header {
+  color: black;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+#faq_subtitle {
+  color: #A4A4A4;
+  padding-top: 3;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/*FOR MESSAGE*/
+
+.message {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+
+.message-box-container {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /*SHADOW*/
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  ion-textarea {
+    display: flex;
+    align-items: flex-start;
+    min-width: 100%;
+    min-height: 250px;
+  }
+
+  .button-platter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    margin-top: 20px;
+  }
+
+  .button {
+    --width: 100px;
+    --height: 50px;
+    --border-radius: 10px;
+  }
+
+  p {
+    color: green;
+  }
+
+  .toast {
+    --color:green;
+  }
+}
